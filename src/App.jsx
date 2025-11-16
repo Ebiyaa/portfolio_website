@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  NavLink,
+} from "react-router-dom";
+
 
 // Import pages
 import Home from "./pages/index.jsx";
@@ -7,6 +13,10 @@ import Projects from "./pages/projects.jsx";
 import About from "./pages/about.jsx";
 import Contact from "./pages/contact.jsx";
 import Blog from "./pages/blog.jsx";
+import BlogCard from "./features/blogCard.jsx";
+import Hackhive from "./pages/posts/hackhive.jsx";
+import Iwd from "./pages/posts/iwd.jsx";
+import Photos from "./pages/posts/photos.jsx";
 import BlogDetail from "./features/blogDetail.jsx";
 
 function App() {
@@ -14,10 +24,16 @@ function App() {
     <Router>
       <main className="bg-black text-white min-h-screen p-10 font-sans">
         {/* Nav component */}
-        <div className="flex justify-between items-center px-8 py-4" style={{ fontFamily: "Pridi, sans-serif" }}>
+        <div
+          className="flex justify-between items-center px-8 py-4"
+          style={{ fontFamily: "Pridi, sans-serif" }}
+        >
           <div className="text-green-400 font-bold text-6xl">ek.</div>
           <nav className="bg-[#282828] box-border content-stretch flex gap-[24px] h-[44px] items-start px-[28px] py-[8px] align-items-center relative rounded-[24px] shrink-0">
-            <div aria-hidden="true" className="absolute border border-[#3d3d3d] border-solid inset-0 pointer-events-none rounded-[24px]" />
+            <div
+              aria-hidden="true"
+              className="absolute border border-[#3d3d3d] border-solid inset-0 pointer-events-none rounded-[24px]"
+            />
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -66,8 +82,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog/*" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog" element={<BlogCard />} />
+          <Route path="/iwd" element={<Iwd />} />
+          <Route path="/hackhive" element={<Hackhive />} />
+          <Route path="/photos" element={<Photos />} />
+          {/* <Route path="/blog/*" element={<Blog />} /> */}
+          {/* <Route path="/blog/:id" element={<BlogDetail />} /> */}
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

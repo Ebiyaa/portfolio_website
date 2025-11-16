@@ -74,8 +74,8 @@ function index() {
 
         {/* project images */}
             <div className="grid md:grid-cols-2 gap-6">
-              <img src="/public/images/project1.png" alt="Project 1" className="rounded-xl" />
-              <img src="/public/images/project2.png" alt="Project 2" className="rounded-xl" />
+              <img src="public/images/project1.png" alt="Project 1" className="rounded-xl" />
+              <img src="public/images/project2.png" alt="Project 2" className="rounded-xl" />
               <img src="/public/images/project3.png" alt="Project 3" className="rounded-xl" />
               <img src="/public/images/project4.png" alt="Project 4" className="rounded-xl" />
             </div>
